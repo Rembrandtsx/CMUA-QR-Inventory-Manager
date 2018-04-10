@@ -253,6 +253,7 @@ function AlignmentPatternFinder( image,  startX,  startY,  width,  height,  modu
 							currentState++;
 						}
 						stateCount[currentState]++;
+						//hola
 					}
 					j++;
 				}
