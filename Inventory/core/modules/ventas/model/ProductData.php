@@ -5,7 +5,10 @@ class ProductData {
 	public function ProductData(){
 		$this->name = "";
 		$this->price_in = "";
-		$this->price_out = "";
+		$this->qridentifier="";
+		$this->supplier="";
+		$this->best_before="";
+		$this->stock="";
 		$this->unit = "";
 		$this->user_id = "";
 		$this->presentation = "0";
@@ -16,7 +19,7 @@ class ProductData {
 
 	public function add(){
 		$sql = "insert into ".self::$tablename." (name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",$this->category_id,$this->inventary_min,NOW())";
+		$sql .= "value (\"$this->name\",\"$this->description\",\"$this->inventary_min\",\"$this->price_in\",$this->user_id,\"$this->presentation\",\"$this->unit\",$this->category_id,$this->inventary_min,NOW())";
 		return Executor::doit($sql);
 	}
 
